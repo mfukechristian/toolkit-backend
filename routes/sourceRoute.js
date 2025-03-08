@@ -1,6 +1,6 @@
 import express from "express";
 import {
-  getSources,
+  getAllSources,
   getSourceById,
   createSource,
   updateSource,
@@ -9,8 +9,7 @@ import {
 
 const router = express.Router();
 
-// Routes
-router.get("/", getSources);
+router.get("/", getAllSources);
 router.get("/:id", getSourceById);
 router.post("/", createSource);
 router.put("/:id", updateSource);

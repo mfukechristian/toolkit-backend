@@ -1,82 +1,137 @@
+import asyncHandler from "express-async-handler";
+import imagekit from "../config/imageKitConfing.js";
 import Source from "../models/SourceModel.js";
 
-// Get all sources
-export const getSources = async (req, res) => {
-  try {
-    const sources = await Source.find({});
-    res.json(sources);
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
-};
+// @desc    Get all sources
+// @route   GET /api/sources
+// @access  Public
+const getAllSources = asyncHandler(async (req, res) => {
+  const sources = await Source.find({}).sort({ createdAt: -1 });
+  res.json(sources);
+});
 
-// Get single source by ID
-export const getSourceById = async (req, res) => {
-  try {
-    const source = await Source.findById(req.params.id);
-    if (source) {
-      res.json(source);
-    } else {
-      res.status(404).json({ message: "Source not found" });
-    }
-  } catch (error) {
-    res.status(500).json({ message: error.message });
+// @desc    Get single source
+// @route   GET /api/sources/:id
+// @access  Public
+const getSourceById = asyncHandler(async (req, res) => {
+  const source = await Source.findById(req.params.id);
+  if (source) {
+    res.json(source);
+  } else {
+    res.status(404);
+    throw new Error("Source not found");
   }
-};
+});
 
-// Create new source
-export const createSource = async (req, res) => {
-  try {
-    const { name, description, category, url } = req.body;
-    const source = new Source({
-      name,
-      description,
-      category,
-      image: req.body.image || "",
-      url,
+// @desc    Create a source
+// @route   POST /api/sources
+// @access  Private
+const createSource = asyncHandler(async (req, res) => {
+  const { name, description, category, url, image } = req.body;
+
+  // Upload image to ImageKit if file is provided
+  let imageUrl = "";
+  if (req.file) {
+    const uploadResponse = await imagekit.upload({
+      file: req.file.buffer,
+      fileName: `${Date.now()}-${req.file.originalname}`,
+      folder: "/toolkit-sources",
     });
-
-    const createdSource = await source.save();
-    res.status(201).json(createdSource);
-  } catch (error) {
-    res.status(400).json({ message: error.message });
+    imageUrl = uploadResponse.url;
   }
-};
 
-// Update source
-export const updateSource = async (req, res) => {
-  try {
-    const source = await Source.findById(req.params.id);
+  const source = await Source.create({
+    name,
+    description,
+    category,
+    url,
+    image: imageUrl || image, // Use uploaded image URL or provided image URL
+  });
 
-    if (source) {
-      source.name = req.body.name || source.name;
-      source.description = req.body.description || source.description;
-      source.category = req.body.category || source.category;
-      source.image = req.body.image || source.image;
-      source.url = req.body.url || source.url;
+  res.status(201).json(source);
+});
 
-      const updatedSource = await source.save();
-      res.json(updatedSource);
-    } else {
-      res.status(404).json({ message: "Source not found" });
+// @desc    Update a source
+// @route   PUT /api/sources/:id
+// @access  Private
+const updateSource = asyncHandler(async (req, res) => {
+  const source = await Source.findById(req.params.id);
+
+  if (!source) {
+    res.status(404);
+    throw new Error("Source not found");
+  }
+
+  let imageUrl = source.image;
+
+  // Handle image update if file is provided
+  if (req.file) {
+    // Delete old image if it exists
+    if (source.image) {
+      const fileId = source.image.split("/").pop().split(".")[0];
+      try {
+        await imagekit.deleteFile(fileId);
+      } catch (error) {
+        console.error("Error deleting old image:", error);
+      }
     }
-  } catch (error) {
-    res.status(400).json({ message: error.message });
+
+    // Upload new image
+    const uploadResponse = await imagekit.upload({
+      file: req.file.buffer,
+      fileName: `${Date.now()}-${req.file.originalname}`,
+      folder: "/toolkit-sources",
+    });
+    imageUrl = uploadResponse.url;
+  } else if (req.body.image) {
+    // If no file but image URL provided in body
+    imageUrl = req.body.image;
   }
-};
 
-// Delete source
-export const deleteSource = async (req, res) => {
-  try {
-    const source = await Source.findById(req.params.id);
+  const updatedSource = await Source.findByIdAndUpdate(
+    req.params.id,
+    {
+      name: req.body.name || source.name,
+      description: req.body.description || source.description,
+      category: req.body.category || source.category,
+      url: req.body.url || source.url,
+      image: imageUrl,
+    },
+    { new: true }
+  );
 
-    if (source) {
-      await Source.deleteOne({ _id: req.params.id });
-      res.json({ message: "Source removed" });
-    } else {
-      res.status(404).json({ message: "Source not found" });
+  res.json(updatedSource);
+});
+
+// @desc    Delete a source
+// @route   DELETE /api/sources/:id
+// @access  Private
+const deleteSource = asyncHandler(async (req, res) => {
+  const source = await Source.findById(req.params.id);
+
+  if (!source) {
+    res.status(404);
+    throw new Error("Source not found");
+  }
+
+  // Delete image from ImageKit if exists
+  if (source.image) {
+    const fileId = source.image.split("/").pop().split(".")[0];
+    try {
+      await imagekit.deleteFile(fileId);
+    } catch (error) {
+      console.error("Error deleting image:", error);
     }
-  } catch (error) {
-    res.status(500).json({ message: error.message });
   }
+
+  await source.deleteOne();
+  res.json({ message: "Source removed" });
+});
+
+export {
+  getAllSources,
+  getSourceById,
+  createSource,
+  updateSource,
+  deleteSource,
 };

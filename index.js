@@ -1,28 +1,25 @@
 import express from "express";
 import dotenv from "dotenv";
-import cors from "cors";
+dotenv.config();
 import connectDB from "./config/dbConfig.js";
 import sourceRoutes from "./routes/sourceRoute.js";
 
-dotenv.config();
+connectDB();
 
 const app = express();
 
 // Middleware
 app.use(cors());
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Routes
+app.get("/", (req, res) => {
+  res.send("API is running...");
+});
+
 app.use("/api/sources", sourceRoutes);
 
-// Serve static files from data/images
-app.use("/data/images", express.static("data/images"));
-
-// Connect to MongoDB
-connectDB();
-
-// Start server
+// Start Server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
