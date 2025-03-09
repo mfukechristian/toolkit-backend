@@ -2,7 +2,7 @@ const data = [
   {
     name: "Coolify",
     description:
-      "Coolify is an open-source, self-hostable alternative to platforms like Heroku, Netlify, and Vercel. It supports numerous languages and allows deployment to any server with an SSH connection. Features include Git integration, free SSL certificates, automatic database backups, webhooks, a powerful API, and real-time terminal access.",
+      "Coolify is an open-source, self-hostable alternative to platforms like Heroku, Netlify, and Vercel. It supports numerous languages and allows deployment to any server with an SSH connection.",
     category: "Directory",
     image: "data/images/coolify.png",
     url: "https://coolify.io/",
@@ -10,7 +10,7 @@ const data = [
   {
     name: "OSS Gallery",
     description:
-      "OSS Gallery is a crowdsourced platform that showcases the best open-source projects on the internet. Built with the Dub TypeScript SDK, it helps developers and designers discover and access various open-source tools, frameworks, and APIs for their projects",
+      "OSS Gallery is a crowdsourced platform that showcases the best open-source projects on the internet.",
     category: "Directory",
     image: "data/images/oss-galery.png",
     url: "https://oss.gallery/",
@@ -18,7 +18,7 @@ const data = [
   {
     name: "Super",
     description:
-      "Super.so turns Notion pages into fully customized websites with high performance and SEO optimization. It allows users to create professional sites in minutes without coding, focusing on content creation while Super handles hosting, security, and scaling.",
+      "Super.so turns Notion pages into fully customized websites with high performance and SEO optimization. It allows users to create professional sites in minutes without coding.",
     category: "No Code Tool",
     image: "data/images/super.png",
     url: "https://super.so/",
@@ -26,7 +26,7 @@ const data = [
   {
     name: "Open Alternative",
     description:
-      "OpenAlternative.co is a curated directory of open-source alternatives to popular SaaS products, designed to help users save money with reliable, hand-picked tools. It features projects like Strapi, Supabase, and NocoDB, offering alternatives to platforms like Airtable and Notion.",
+      "OpenAlternative.co is a curated directory of open-source alternatives to popular SaaS products, designed to help users save money with reliable.",
     category: "Directory",
     image: "data/images/openalternative.png",
     url: "https://openalternative.co/",
@@ -34,7 +34,7 @@ const data = [
   {
     name: "Fontpair",
     description:
-      "Fontpair.co helps designers choose the perfect font combinations for their projects. It showcases various pairings and allows users to visualize these fonts in editable text blocks. It also highlights free, open-source fonts, making it a valuable resource for typography inspiration.",
+      "Fontpair.co helps designers choose the perfect font combinations for their projects. It showcases various pairings and allows users to visualize these fonts in editable text blocks.",
     category: "Design",
     image: "data/images/fontpair.png",
     url: "https://www.fontpair.co/",
@@ -42,7 +42,7 @@ const data = [
   {
     name: "Maneken",
     description:
-      "Maneken is a browser-powered mockup editor that simplifies showcasing content across various mediums. It allows users to drag and drop media, edit with fine-grain controls, and export web-ready assets. With an extensive catalog and features like Multi Slots and a Dynamic Color Picker, Maneken streamlines the design process.",
+      "Maneken is a browser-powered mockup editor that simplifies showcasing content across various mediums. It allows users to drag and drop media, edit with fine-grain controls, and export web-ready assets.",
     category: "Design",
     image: "data/images/maneken.png",
     url: "https://maneken.app/",
@@ -50,7 +50,7 @@ const data = [
   {
     name: "Vidclue",
     description:
-      "VidClue is a video idea library offering inspiration for short-form videos for brands and businesses. It provides numerous video ideas across categories like interactive engagement, educational styles, comedy formats, internet trends, creative devices, and various video and motion techniques.",
+      "VidClue is a video idea library offering inspiration for short-form videos for brands and businesses.",
     category: "Inspiration",
     image: "data/images/Vidclue.png",
     url: "https://vidclue.com/",
@@ -58,7 +58,7 @@ const data = [
   {
     name: "Shots",
     description:
-      "Shots.so is a website that helps you create aesthetically pleasing device mockups of your website or app screenshots. It allows you to showcase your designs in a professional and visually appealing way.",
+      "Shots.so is a website that helps you create aesthetically pleasing device mockups of your website or app screenshots.",
     category: "Design",
     image: "data/images/Shots.png",
     url: "https://shots.so/",
@@ -66,9 +66,9 @@ const data = [
   {
     name: "Visual Electric",
     description:
-      "Visual Electric appears to be a platform that uses AI to generate images from text prompts. It showcases various styles, such as fashion and product photography, and allows users to create visuals based on specific descriptions.",
-    category: "AI",
-    image: "",
+      "Visual Electric is a platform that uses AI to generate images from text prompts and allows users to create visuals based on specific descriptions.",
+    category: "Artificial Intelligence",
+    image: "data/images/visualelectric.png",
     url: "https://visualelectric.com/",
   },
   {
@@ -82,8 +82,7 @@ const data = [
   {
     name: "Public Api",
     description:
-      "Public APIs is a comprehensive directory of free and freemium APIs across various categories. It helps developers discover and utilize APIs for their projects, offering information on authentication, CORS support, and HTTPS. It includes a wide range of APIs from finance and weather to anime and government data.",
-    category: "Directory",
+      "Public APIs is a comprehensive directory of free and freemium APIs across various categories. It helps developers discover and utilize APIs for their projects, offering information on authentication, CORS support, and HTTPS.",
     image: "data/images/publicapi.png",
     url: "https://publicapis.dev",
   },
@@ -98,9 +97,9 @@ const data = [
   {
     name: "Code Your Future",
     description:
-      "CodeYourFuture offers free tech training for refugees and disadvantaged individuals, helping them learn tech skills and change their lives. The organization boasts a high trainee satisfaction rate and helps many graduates find employment in the tech industry.",
+      "CodeYourFuture offers free tech training for refugees and disadvantaged individuals, helping them learn tech skills and change their lives.",
     category: "Learn",
-    image: "",
+    image: "data/images/codeyourfuture.png",
     url: "https://codeyourfuture.io",
   },
   {
@@ -114,7 +113,7 @@ const data = [
   {
     name: "Mobbin",
     description:
-      "Mobbin.com is a UI & UX pattern library showcasing mobile and web app designs. It provides a searchable collection of interfaces, user flows, and design examples from various apps like Todoist, helping designers find inspiration and best practices for their projects.",
+      "Mobbin.com is a UI & UX pattern library showcasing mobile and web app designs. It provides a searchable collection of interfaces, user flows, and design examples from various apps, helping designers find inspiration and best practices for their projects.",
     category: "Inspiration",
     image: "data/images/mobbin.png",
     url: "https://mobbin.com",
@@ -130,7 +129,7 @@ const data = [
   {
     name: "Free Figma Templates",
     description:
-      "Free Figma Templates offers a collection of high-quality, carefully selected resources for designers, including website templates, plugins, and UI elements, providing a wide array of content to enhance design projects without needing to create everything from scratch. This platform is ideal for those looking to streamline their workflow and improve efficiency in design tasks.",
+      "Free Figma Templates offers a collection of high-quality, carefully selected resources for designers, including website templates, plugins, and UI elements, providing a wide array of content to enhance design projects without needing to create everything from scratch.",
     category: "Inspiration",
     image: "data/images/freefigmatemplates.png",
     url: "https://www.freefigmatemplates.com/",
@@ -146,7 +145,7 @@ const data = [
   {
     name: "Brad Traversy",
     description:
-      "Traversy Media is a prominent YouTube channel focused on web development and programming tutorials, boasting over 2.2 million subscribers and more than 973 videos covering various web technologies. It's highly regarded as one of the best resources for learning web development, with total views exceeding 200 million. The channel provides both beginner-friendly content and advanced topics, making it suitable for developers at all levels.",
+      "Traversy Media is a prominent YouTube channel focused on web development and programming tutorials, boasting over 2.2 million subscribers and more than 973 videos covering various web technologies. It's highly regarded as one of the best resources for learning web development, with total views exceeding 200 million.",
     category: "Who to Follow",
     image: "data/images/bradtraversy.png",
     url: "https://www.youtube.com/traversymedia",
@@ -154,7 +153,7 @@ const data = [
   {
     name: "Florin Pop",
     description:
-      "Florin Pop's YouTube channel, started in 2019, focuses on sharing knowledge about web development, particularly FrontEnd technologies like HTML, CSS, and JavaScript. Florin creates content aimed at teaching programming while also streaming regularly on Twitch. Initially setting a goal to reach 100,000 subscribers in 2020, he has continued to grow his audience by sharing valuable insights and projects.",
+      "Florin Pop's YouTube channel, started in 2019, focuses on sharing knowledge about web development, particularly FrontEnd technologies like HTML, CSS, and JavaScript. Florin creates content aimed at teaching programming while also streaming regularly on Twitch.",
     category: "Who to Follow",
     image: "data/images/florinpop.png",
     url: "https://www.youtube.com/@FlorinPop",
@@ -170,8 +169,8 @@ const data = [
   {
     name: "Pinokio",
     description:
-      "Pinokio is a tool that simplifies the installation process of various open-source AI applications, making it accessible even for those without programming experience. It supports multiple platforms including Windows, Mac, and Linux, offering a seamless way to install, run, and manage AI tools with isolation between them to prevent conflicts during updates.",
-    category: "AI",
+      "Pinokio is a tool that simplifies the installation process of various open-source AI applications, making it accessible even for those without programming experience. It supports multiple platforms including Windows, Mac, and Linux, offering a seamless way to install, run, and manage AI tools.",
+    category: "Artificial Intelligence",
     image: "data/images/pinokio.png",
     url: "https://pinokio.computer/",
   },
@@ -186,8 +185,8 @@ const data = [
   {
     name: "unwind ai",
     description:
-      "Unwind AI is a platform designed to make AI knowledge usable for everyone, offering the latest developments and tutorials in AI, catering to an ecosystem of over 75k AI professionals. It provides resources like newsletters, dispatched every weekday, and social media engagement aimed at both beginners and experts in AI integration.",
-    category: "AI",
+      "Unwind AI is a platform designed to make AI knowledge usable for everyone, offering the latest developments and tutorials in AI, catering to an ecosystem of over 75k AI professionals.",
+    category: "Artificial Intelligence",
     image: "data/images/unwindai.png",
     url: "https://www.theunwindai.com/",
   },
@@ -195,7 +194,7 @@ const data = [
     name: "Hugging Face Chat",
     description:
       "Hugging Face Chat is an open-source platform providing access to advanced AI chat models. It supports tools like web search, multimodal inputs (e.g., images), and function calling, enabling users to interact with generative AI applications.",
-    category: "AI",
+    category: "Artificial Intelligence",
     image: "data/images/hugginFaceChat.png",
     url: "https://huggingface.co/chat/",
   },
@@ -203,15 +202,15 @@ const data = [
     name: "OpenRouter",
     description:
       "OpenRouter is a unified API gateway that provides access to a wide range of AI models from providers like OpenAI, Anthropic, Google, and Meta. It simplifies AI integration by offering a single API key for multiple models, cost-effective pricing, and seamless switching between models for diverse applications such as content creation, coding, and research.",
-    category: "AI",
+    category: "Artificial Intelligence",
     image: "data/images/openRouter.png",
     url: "https://openrouter.ai/",
   },
   {
     name: "Piclumen",
     description:
-      "PicLumen is an advanced AI-powered image generation platform that transforms text prompts or photo inputs into stunning visuals. It offers diverse creative tools, including realistic image generation, anime-style artwork, and illustrations for branding, fashion, architecture, and more. Features like background removal, upscaling, and customizable styles make it ideal for artists and designers",
-    category: "AI",
+      "PicLumen is an advanced AI-powered image generation platform that transforms text prompts or photo inputs into stunning visuals. It offers diverse creative tools, including realistic image generation, anime-style artwork, and illustrations for branding, fashion, architecture, and more.",
+    category: "Artificial Intelligence",
     image: "data/images/piclumen.png",
     url: "https://www.piclumen.com/",
   },
@@ -219,15 +218,15 @@ const data = [
     name: "Le Chat by Mistral",
     description:
       "Le Chat by Mistral AI is a cutting-edge AI chatbot that generates human-like responses, serving as a versatile work assistant for creative tasks, coding, and more.",
-    category: "AI",
+    category: "Artificial Intelligence",
     image: "data/images/lechat.png",
     url: "https://chat.mistral.ai/chat",
   },
   {
     name: "Theres an Ai for That",
     description:
-      "There's An AI For That is a platform that aggregates AI tools for various tasks, helping users find the right solution for their needs. It is widely used by people looking to leverage AI for content generation, data analysis, and more, with over 50 million visitors seeking appropriate tools for different use cases",
-    category: "AI",
+      "There's An AI For That is a platform that aggregates AI tools for various tasks, helping users find the right solution for their needs.",
+    category: "Artificial Intelligence",
     image: "data/images/theresanaiforthat.png",
     url: "https://theresanaiforthat.com/",
   },
@@ -242,8 +241,8 @@ const data = [
   {
     name: "Grep by Vercel",
     description:
-      "grep.app is a powerful code search engine that indexes over 500,000 GitHub repositories, enabling users to search for code snippets in multiple programming languages such as C, C++, PHP, GO, Python, and JavaScript. Acquired by Vercel, it is known for its speed and efficiency in searching through open-source projects",
-    category: "AI",
+      "grep.app is a powerful code search engine that indexes over 500,000 GitHub repositories, enabling users to search for code snippets in multiple programming languages.",
+    category: "Artificial Intelligence",
     image: "data/images/grep.png",
     url: "https://grep.app/",
   },
