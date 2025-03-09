@@ -83,6 +83,7 @@ const data = [
     name: "Public Api",
     description:
       "Public APIs is a comprehensive directory of free and freemium APIs across various categories. It helps developers discover and utilize APIs for their projects, offering information on authentication, CORS support, and HTTPS.",
+    category: "Directory",
     image: "data/images/publicapi.png",
     url: "https://publicapis.dev",
   },
@@ -245,6 +246,118 @@ const data = [
     category: "Artificial Intelligence",
     image: "data/images/grep.png",
     url: "https://grep.app/",
+  },
+  {
+    name: "WeThinkCode_",
+    description:
+      "WeThinkCode is a South African software development academy tackling the technical skills shortage and youth unemployment by discovering the sharpest minds from underserved communities in South Africa and equipping them with the skills to launch a career in tech.",
+    category: "Learn",
+    image: "data/images/wethinkcode.png",
+    url: "https://wethinkcode.co.za/ ",
+  },
+  {
+    name: "Frontend Mentor",
+    description:
+      "Frontend Mentor provides front-end developers with coding challenges to improve their skills by building real projects.",
+    category: "Learn",
+    image: "data/images/frontendmentor.png",
+    url: "https://www.frontendmentor.io/ ",
+  },
+  {
+    name: "freeCodeCamp",
+    description:
+      "freeCodeCamp.org is a friendly community where you can learn to code for free.",
+    category: "Learn",
+    image: "data/images/freecodecamp.png",
+    url: "https://www.freecodecamp.org/ ",
+  },
+  {
+    name: "The Odin Project",
+    description:
+      "The Odin Project is a free programming course that teaches full stack web development from the ground up, providing an incredible self-paced curriculum consisting of the best resources for learning programming on the web.",
+    category: "Learn",
+    image: "data/images/odinproject.png",
+    url: "https://www.theodinproject.com/ ",
+  },
+  {
+    name: "DeepLearning.AI",
+    description:
+      "DeepLearning.AI is a learning platform that provides world-class AI education accessible to people globally, offering courses and specializations to grow your AI career with foundational knowledge and skill-specific short courses taught by leaders in the field.",
+    category: "Learn",
+    image: "data/images/deeplearning.png",
+    url: "https://www.deeplearning.ai/ ",
+  },
+  {
+    name: "Scrimba",
+    description:
+      "Scrimba is a platform designed to help individuals learn to code through interactive tutorials and courses, offering lessons on topics like React, Vue, Angular, JavaScript, HTML, and CSS.",
+    category: "Learn",
+    image: "data/images/scrimba.png",
+    url: "https://scrimba.com/home ",
+  },
+  {
+    name: "Indie Hackers",
+    description:
+      "Indie Hackers is a community and platform for founders building profitable online businesses. It provides stories, insights, and resources about creating successful startups, focusing on individuals who generate income independently by developing products or services that solve problems without needing external permissions.",
+    category: "Community",
+    image: "data/images/indiehacker.png",
+    url: "https://www.indiehackers.com/ ",
+  },
+  {
+    name: "CodeNewbie",
+    description:
+      "CodeNewbie is the most supportive community of programmers, especially targeted towards people learning to code. It offers resources and a platform for individuals on their coding journey, providing podcasts, articles, and discussions aimed at helping new coders grow 2.",
+    category: "Community",
+    image: "data/images/codenewbie.png",
+    url: "https://www.codenewbie.org/ ",
+  },
+  {
+    name: "Together AI",
+    description:
+      "Together AI is a comprehensive AI acceleration platform enabling developers and enterprises to train, fine-tune, and deploy generative AI models with easy-to-use APIs and highly scalable infrastructure, offering an end-to-end solution for the full generative AI lifecycle.",
+    category: "Artificial Intelligence",
+    image: "data/images/togetherai.png",
+    url: "https://www.together.ai/ ",
+  },
+  {
+    name: "MrDbourke",
+    description:
+      "MrDbourke is a YouTube channel focused on technology, programming, and AI-related content.",
+    category: "Who to Follow",
+    image: "data/images/danielbourke.png",
+    url: "https://www.youtube.com/@mrdbourke ",
+  },
+  {
+    name: "Leon Noel",
+    description:
+      "Leon Noel is a software engineer, entrepreneur, and educator with a passion for training people underrepresented in tech for high growth careers as software engineers.",
+    category: "Who to Follow",
+    image: "data/images/leonnoel.png",
+    url: "https://leonnoel.com/ ",
+  },
+  {
+    name: "Angela Yu",
+    description:
+      "Angela Yu is a prominent figure in the field of software development, known for her work as a Founder of The App Brewery and as an Instructor for popular coding courses. With extensive experience, she has educated millions of learners worldwide on platforms like Udemy.",
+    category: "Who to Follow",
+    image: "data/images/angelayu.png",
+    url: "https://www.udemy.com/course/the-complete-web-development-bootcamp/?couponCode=LEARNNOWPLANS",
+  },
+  {
+    name: "Colt Steele",
+    description:
+      "Colt Steele is a renowned developer and bootcamp instructor known for his passion for teaching. He has extensive experience teaching people to program, having worked at two different immersive bootcamps. In 2016, he launched his Web Developer Bootcamp course on Udemy, which became one of the best selling and top rated courses on the platform.",
+    category: "Who to Follow",
+    image: "data/images/coltsteel.png",
+    url: "https://www.udemy.com/user/coltsteele/?kw=colt&amp;src=sac ",
+  },
+  {
+    name: "Zero To Mastery",
+    description:
+      "Zero To Mastery is an online learning platform that offers expert-led courses to help individuals learn in-demand skills, get hired in high-paying jobs, and advance their careers. With over 29+ courses providing more than 700 hours of up-to-date video content covering topics such as web development, ethical hacking, data structures, and algorithms.",
+    category: "Learn",
+    image: "data/images/zerotomastery.png",
+    url: "https://zerotomastery.io/ ",
   },
 ];
 
